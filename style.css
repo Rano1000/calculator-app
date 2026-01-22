@@ -1,0 +1,113 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#eeeeee;
+}
+
+/* Calculator body */
+.calculator{
+  width:380px;
+  height:380px;
+  background:#1f2235;
+  border-radius:24px;
+  padding:18px;
+  box-shadow:0 30px 60px rgba(0,0,0,0.5);
+}
+
+/* Display */
+.display{
+  height:64px;
+  background:#3a3f74;
+  border-radius:18px;
+  margin-bottom:18px;
+  padding:14px;
+  font-size:24px;
+  color:#fff;
+  text-align:right;
+  overflow-x:auto;
+}
+
+
+/* Main layout */
+.layout{
+  display:flex;
+  gap:16px;
+}
+
+/* Numbers */
+.numbers{
+  flex:1;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:14px;
+}
+
+/* Operators */
+.ops{
+  width:120px;
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap:14px;
+}
+
+/* Base button */
+.btn{
+  border:none;
+  cursor:pointer;
+  font-size:16px;
+  color:#fff;
+  background:#2a2d3f;
+  box-shadow:
+    0 8px 16px rgba(0,0,0,0.55),
+    inset 0 1px 1px rgba(255,255,255,0.1);
+  transition: transform 0.1s ease;
+}
+
+.btn:active{
+  transform:scale(0.96);
+}
+
+/* Number buttons */
+.num{
+  height:48px;
+  border-radius:24px;
+}
+
+/* Operator buttons */
+.op{
+  height:48px;
+  width:48px;
+  border-radius:50%;
+  background:#f5a623;
+  color:#fafafa;   
+  font-weight:600;
+  justify-self:center;
+}
+
+
+/* Backspace */
+.back{
+  height:48px;
+  border-radius:14px;
+  background:#3a3d55;
+}
+
+/* Equal button */
+.equal{
+  grid-column: span 2;
+  height:52px;
+  border-radius:26px;
+  background:#d6d6d6;
+  color:#1f2235;
+  font-size:20px;
+}
